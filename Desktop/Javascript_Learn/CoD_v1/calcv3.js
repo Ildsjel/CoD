@@ -10,6 +10,10 @@ function valueType() {
 				var redcostotal = manpower*timespent
 				document.write(redcostotal)
 				}
+			else {
+				console.log("Error")
+			}
+
 		}
 
 	else if (avocos.checked){
@@ -20,6 +24,9 @@ function valueType() {
 				var avocostotal = totalcostavoided
 				document.write(avocostotal)
 				}
+			else {
+				console.log("Error")
+			}
 		}
 	else if (increv.checked){
 		var totalrevenueincrease = prompt("Please enter how much revenue will increase per sales", "10");
@@ -29,6 +36,9 @@ function valueType() {
 				var increvtotal = totalrevenueincrease*howmanysalesperweek
 				document.write(increvtotal)
 				}
+			else {
+				console.log("Error")
+			}
 		}
 		
 	else if (prorev.checked){
@@ -38,6 +48,9 @@ function valueType() {
 				var prorevtotal = totalrevenueprotected
 				document.write(prorevtotal)
 				}
+			else {
+				console.log("Error")
+			}
 		}
 
 	else {
