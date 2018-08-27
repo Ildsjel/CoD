@@ -1,0 +1,79 @@
+<html>
+	<head>
+
+	</head>
+	<body>
+		<h1>Value Calculator</h1>
+
+		<form>
+
+  			<p>What kind of value do you expect from your project?</p>
+
+  <!--here is the table to get the user input about the type of value creation.-->
+
+			  <fieldset>
+			    <input type="radio" id="redcos" name="valuetype" value="redcos">
+			    <label for="redcos">Reduce Cost</label> 
+
+			    <input type="radio" id="avocos" name="valuetype" value="Avoid Cost">
+			    <label for="avocos">Avoid Cost</label>
+
+			    <input type="radio" id="increv" name="valuetype" value="Increase Revenue">
+			    <label for="increv">Increase Revenue</label> 
+
+			     <input type="radio" id="prorev" name="valuetype" value="Protect Revenue">
+			    <label for="prorev">Protect Revenue</label> 
+
+			    <main id="confirm">
+			    	<button type="button" id="confirmbutton" onclick="valueType()">confirm</button>
+			    </main>
+
+			    
+
+				<script type="text/javascript">
+
+					/*function to get value type*/
+
+					function valueType() {
+
+					if (redcos.checked){
+						var manpower = prompt("Please enter how many people are involved in the current process", "10");
+						var timespent = prompt("Please enter how many hours a week the process takes", "10");
+
+						if (manpower != 0){
+							var redcostotal = manpower*timespent
+							document.write(redcostotal)
+					}
+					}
+					else if (avocos.checked){
+						var totalcostavoided = prompt("Please enter how much cost in total will be avoided", "10");
+						var totalcostavoided = prompt("Please enter when the cost will occur", "10.10.18");
+					}
+					else if (increv.checked){
+						var totalrevenueincrease = prompt("Please enter how much revenue will increase per sales", "10");
+						var howmanysalesperweek = prompt("Please enter how much you can sell per week", "10");
+					}
+					else if (prorev.checked){
+						var totalrevenueprotected = prompt("Please enter how much revenue will be protected per week", "10");
+					}
+					else {
+						console.log("Error");
+					}
+					}
+
+					
+
+					/*function to caluclate and output cost*/
+					
+
+
+				</script>
+
+			  </fieldset>
+
+
+</form>
+
+	
+
+	</body>
