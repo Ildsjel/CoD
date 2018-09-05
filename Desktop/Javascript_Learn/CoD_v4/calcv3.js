@@ -8,14 +8,18 @@ function valueType() {
 		var timespent = prompt("Please enter how many hours a week the process takes", "10");
 
 			if (manpower != 0){
-				var redcostotal = manpower*timespent
-				document.write(redcostotal)
+				var redcostotal = manpower*timespent;
+				return redcostotal;
 				}
 			else {
-				console.log("Error")
+				console.log("Error");
 			}
-
+		var output = document.getElementById('output');
+		output.innerHTML = el.redcostotal;
 		}
+}
+
+/*
 
 	else if (avocos.checked){
 		var totalcostavoided = prompt("Please enter how much cost in total will be avoided", "10");
@@ -59,4 +63,4 @@ function valueType() {
 		}
 }
 
-
+*/
