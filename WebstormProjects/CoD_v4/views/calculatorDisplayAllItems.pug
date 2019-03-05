@@ -1,0 +1,16 @@
+extends layout
+
+block content
+
+
+
+    table#desc
+
+        each WSJF in WSJFList
+            li
+            a#listItem(href=WSJF.id) #[strong #{WSJF.itemName}] // Value: #{WSJF.redcostotal} // Duration: #{WSJF.estimationValue} Weeks = Time/Value Efficiency: #[#{WSJF.WSJFValue}]
+
+        else
+            li
+            a There are no Items
+
