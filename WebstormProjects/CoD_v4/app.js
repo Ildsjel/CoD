@@ -18,7 +18,7 @@ app.use(router);
 const port = process.env.PORT || 3305;
 var mongoose = require("mongoose");
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://localhost:3305/");
+mongoose.connect("mongodb://heroku_230rmhw2:qjv7hujcffpcvk2mhku2ciq32s@ds261155.mlab.com:61155/heroku_230rmhw2");
 
 //configuration of the app
 app.use(bodyParser.urlencoded({ extended: true }));
