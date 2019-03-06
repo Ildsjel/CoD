@@ -2,7 +2,7 @@
 const mongoose = require("mongoose");
 
 const dbURI =
-  "mongodb://heroku_230rmhw2:qjv7hujcffpcvk2mhku2ciq32s@ds261155.mlab.com:61155/heroku_230rmhw2";
+  "mongodb://localhost:27017/tasks";
 const options = {
   reconnectTries: Number.MAX_VALUE,
   poolSize: 10
@@ -17,6 +17,6 @@ mongoose.connect(dbURI, options).then(
   }
 );
 
-// require any models
+
 
 

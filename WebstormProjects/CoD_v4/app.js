@@ -4,6 +4,7 @@ const app = express();
 const bodyParser = require("body-parser");
 const router = express.Router();
 const WSJFController = require("./controller/WSJFController");
+const DBConnect = require("./config/db");
 //const UserController = require("./controller/UserController");
 
 
@@ -18,7 +19,7 @@ app.use(router);
 const port = process.env.PORT || 3305;
 var mongoose = require("mongoose");
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://heroku_230rmhw2:qjv7hujcffpcvk2mhku2ciq32s@ds261155.mlab.com:61155/heroku_230rmhw2");
+;
 
 //configuration of the app
 app.use(bodyParser.urlencoded({ extended: true }));
