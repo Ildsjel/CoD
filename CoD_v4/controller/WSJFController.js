@@ -1,4 +1,4 @@
-const WSJF = require("../model/WSJFitemReduceCost");
+const WSJF = require("../model/WSJFitem");
 const { body,validationResult } = require('express-validator/check');
 const { sanitizeBody } = require('express-validator/filter');
 

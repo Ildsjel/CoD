@@ -4,8 +4,6 @@ const app = express();
 const bodyParser = require("body-parser");
 const router = express.Router();
 const WSJFController = require("./controller/WSJFController");
-const WSJFAvoidController = require("./controller/WSJFAvoidController");
-
 //const UserController = require("./controller/UserController");
 
 
@@ -20,7 +18,7 @@ app.use(router);
 const port = process.env.PORT || 3305;
 var mongoose = require("mongoose");
 mongoose.Promise = global.Promise;
-;
+mongoose.connect("mongodb://localhost:3305/");
 
 //configuration of the app
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -42,20 +40,13 @@ app
       res.render('index.pug');
     });
 
-//reduce cost calc
+//avoid cost calc
 app
     .route('/calculator')
     .get(function (req, res) {
         res.render('calculator.pug');
     });
-
-//avoid cost calc
-app
-    .route("/post_WSJFAvoid_item")
-    .get(WSJFAvoidController.listAllWSJFAvoidItems)
-    .post(WSJFAvoidController.createWSJFAvoidItem);
-
-//post a new reduce cost item & list all items
+//post a new avoid cost item & list all items
 app
     .route("/post_WSJF_item")
     .get(WSJFController.listAllWSJFItems)
@@ -67,8 +58,6 @@ app
     //.delete(WSJFController.deleteWSJFItem)
     .get(WSJFController.listWSJFItem);
     //.post(WSJFController.updateWSJFitem);
-
-
 
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
